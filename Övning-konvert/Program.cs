@@ -2,7 +2,7 @@
 
 class Program {
     
-    //TODO: Implementera konverteringar
+    //TODO: Implementera konverteringar #1
     
     // static void Main(string[] args) {
     //     Console.Write("Write temperature in Celsius: ");
@@ -11,7 +11,7 @@ class Program {
     //     Console.WriteLine($"{celsius} Celsius is {fahrenheit} Fahrenheit");
     // }
 
-    //TODO: Implementera TryParse
+    //TODO: Implementera TryParse #2
     
     // public static void Main(string[] args) {
     //     Console.Write("Write a number: ");
@@ -22,7 +22,7 @@ class Program {
     //     }
     // }
 
-    //TODO: Implementera Random
+    //TODO: Implementera Random #3
     
     // public static void Main(string[] args) {
     //     var random = new Random();
@@ -36,43 +36,4 @@ class Program {
     //         enter = Console.ReadLine() ?? "";
     //     }
     // }
-
-    public static void Main(string[] args) {
-        Console.WriteLine("Welcome to calculator");
-        Console.WriteLine("Enter first number: ");
-        bool isFirstNumberValid = double.TryParse(Console.ReadLine(), out double firstNumber);
-        Console.WriteLine("Enter second number: ");
-        bool isSecondNumberValid = double.TryParse(Console.ReadLine(), out double secondNumber);
-        
-        char operation = GetValidCharInput("Please enter a valid operation (+, -, *, /): ");
-
-        if (!isFirstNumberValid || !isSecondNumberValid) {
-            
-        }
-    }
-    
-    private static double GetValidNumberInput(string question) {
-        Console.WriteLine(question);
-        double result;
-        
-        while (!double.TryParse(Console.ReadLine(), out result)) {
-            Console.WriteLine("Please enter a valid number.");
-            Console.WriteLine(Enumerable.Repeat('-', Console.BufferWidth).ToArray());
-        }
-
-        return result;
-    }
-    
-    private static char GetValidCharInput(string question) {
-        Console.WriteLine(question);
-        char result;
-
-        while (!char.TryParse(Console.ReadLine(), out result)) {
-            Console.WriteLine("Please enter a valid character.");
-            Console.WriteLine(Enumerable.Repeat('-', Console.BufferWidth).ToArray());
-            Console.WriteLine(question);
-        }
-
-        return result;
-    }
 }
