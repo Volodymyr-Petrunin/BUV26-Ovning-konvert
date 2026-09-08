@@ -36,4 +36,28 @@ class Program {
     //         enter = Console.ReadLine() ?? "";
     //     }
     // }
+    
+    //TODO Guess a number #6
+    public static void Main(string[] args) {
+        var random = new Random();
+        int number = random.Next(1, 101);
+        int tries = 1;
+
+        int userGuess = GetUserGuess();
+        
+        while (userGuess != number) {
+            Console.WriteLine(userGuess < number ? "Högre" : "Lägre");
+            
+            tries++;
+            userGuess = GetUserGuess();
+        }
+        
+        Console.WriteLine($"You guessed the number in {tries} tries");
+    }
+
+    private static int GetUserGuess() {
+        Console.Write("Guess a number between 1 and 100: ");
+        int userGuess = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
+        return userGuess;
+    }
 }
