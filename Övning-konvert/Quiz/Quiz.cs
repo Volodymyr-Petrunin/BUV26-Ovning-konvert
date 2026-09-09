@@ -6,16 +6,16 @@ public class Quiz {
 
     private static readonly Random Random = new Random();
     
-    public static void Main(string[] args) {
-        Console.WriteLine("How many questions do you want to answer?");
-        int amountOfQuestions = int.Parse(Console.ReadLine());
-        
-        List<Question> questions = generateQuestions(amountOfQuestions);
-
-        int correctAnswers = questions.Count(CheckAnswer);
-        
-        Console.WriteLine($"You got {correctAnswers} out of {questions.Count} correct");
-    }
+    // public static void Main(string[] args) {
+    //     Console.WriteLine("How many questions do you want to answer?");
+    //     int amountOfQuestions = int.Parse(Console.ReadLine());
+    //     
+    //     List<Question> questions = generateQuestions(amountOfQuestions);
+    //
+    //     int correctAnswers = questions.Count(CheckAnswer);
+    //     
+    //     Console.WriteLine($"You got {correctAnswers} out of {questions.Count} correct");
+    // }
 
     private static List<Question> generateQuestions(int amount) {
         var questions = new List<Question>();
