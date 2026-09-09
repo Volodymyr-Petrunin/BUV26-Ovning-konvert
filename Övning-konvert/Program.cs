@@ -87,24 +87,24 @@ class Program {
 
     //TODO Registration System #9
     
-    public static void Main(string[] args) {
-        Console.WriteLine("Hi, what is your name?");
-        string name = Console.ReadLine();
-
-        Console.WriteLine("Hello " + name + " Whats is your age?");
-        bool isAgeValid = TryParse(Console.ReadLine(), out int age);
-
-        if (!isAgeValid || age is < 0 or > 120) {
-            throw new OutOfAgeException("Your age must be between 0 and 120 and not contains any characters");
-        }
-        
-        Console.WriteLine("Nice, what is your salary");
-        bool isSalaryValid = TryParse(Console.ReadLine(), out int salary);
-
-        if (!isSalaryValid || salary is < 0 or > 100000) {
-            throw new InvalidDataException("Your salary must be between 0 and 100000");
-        }
-
-        Console.WriteLine("Your account is registered successfully");
-    }
+    // public static void Main(string[] args) {
+    //     Console.WriteLine("Hi, what is your name?");
+    //     string name = Console.ReadLine();
+    //
+    //     Console.WriteLine("Hello " + name + " Whats is your age?");
+    //     bool isAgeValid = TryParse(Console.ReadLine(), out int age);
+    //
+    //     if (!isAgeValid || age is < 0 or > 120) {
+    //         throw new OutOfAgeException("Your age must be between 0 and 120 and not contains any characters");
+    //     }
+    //     
+    //     Console.WriteLine("Nice, what is your salary");
+    //     bool isSalaryValid = TryParse(Console.ReadLine(), out int salary);
+    //
+    //     if (!isSalaryValid || salary is < 0 or > 100000) {
+    //         throw new InvalidDataException("Your salary must be between 0 and 100000");
+    //     }
+    //
+    //     Console.WriteLine("Your account is registered successfully");
+    // }
 }
